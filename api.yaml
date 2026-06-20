@@ -1,0 +1,41 @@
+openapi: 3.0.0
+info:
+  title: StudyHub API
+  description: API for students - notes, uploads, M-Pesa payments
+  version: 1.0.0
+  contact:
+    name: Jose-ctr
+    url: https://github.com/Jose-ctr/pwani-study-hub
+servers:
+    - url: https://api.studyhub.co.ke
+    description: Production server
+paths:
+  /health:
+    get:
+      summary: Check if API is alive
+      responses:
+        '200':
+          description: OK
+  /notes:
+    post:
+      summary: Upload a note
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                subject:
+                  type: string
+      responses:
+        '201':
+          description: Note uploaded
+  /mpesa/stkpush:
+    post:
+      summary: M-Pesa payment
+      responses:
+        '200':
+          description: Payment initiated
