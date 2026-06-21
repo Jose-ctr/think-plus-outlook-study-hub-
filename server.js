@@ -13,7 +13,17 @@ app.get('/health', (req, res) => {
 app.get('/', (req, res) => {
   res.json({ message: 'Welcome to Think Plus Outlook API - Built for students worldwide' })
 });
-
+app.get('/courses', (req, res) => {
+  res.json({
+    status: "success",
+    message: "Think Plus Outlook Courses",
+    courses: [
+      { id: 1, name: "KCSE Math", level: "High School" },
+      { id: 2, name: "CBC Grade 7", level: "Junior" },
+      { id: 3, name: "CDAC", level: "College" }
+    ]
+  })
+})
 
 // POST endpoint - kuongeza student mpya
 app.post('/students', (req, res) => {
