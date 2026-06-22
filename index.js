@@ -30,19 +30,22 @@ app.get('/courses', (req, res) => {
   res.json([
     {id: 1, name: "Math 101"},
     {id: 2, name: "Programming 101"}
-  ]);
-});// POST endpoint - kuongeza student mpya
+]);
+
+}); // GET endpoint imefungwa
+
+// POST endpoint - kuongeza student mpya
 app.post('/students', (req, res) => {
   const student = req.body;
   student.id = students.length + 1;
   students.push(student);
-  
+
   res.status(201).json({
     message: "Student added successfully!",
     student: student
-  })
-)
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-
