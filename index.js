@@ -17,7 +17,6 @@ app.get('/health', (req, res) => {
 app.get('/', (req, res) => {
   res.json({ message: 'Welcome to Think Plus Outlook API - Built for students worldwide' })
 });
-})
 // GET endpoint - kuonyesha wanafunzi wote
 app.get('/students', (req, res) => {
   res.json([
