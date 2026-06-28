@@ -1,11 +1,12 @@
+Node.js + Express + Supabase DB
+# think-plus-outlook-study-hub 📚🌍
 
-# think-plus-outlook-study-hub 📚
+**API-first EdTech Backend** built with `Node.js + Express + Supabase DB`. 
 
-**API-first EdTech Backend** built with Flask + Student DB.
+Built for students worldwide, with support for African curriculums + payments.
 
-**Features:** 
-- **Curriculum**: CBC/KNEC, CDAC, WAEC support
+### **Features:** 
+- **Curriculum**: CBC/KNEC, CDAC, WAEC support  
 - **Payments**: M-Pesa & Stripe integration 
 - **Docs**: OpenAPI spec in `api.yaml`
 
-Built for students worldwide 🌍
